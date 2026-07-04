@@ -29,7 +29,7 @@ if (isset($_GET['search_user']) && !empty(trim($_GET['search_user']))) {
 </head>
 <body>
     <div class="container">
-        <h1>🌐 캠퍼스 통합 게시판 시스템</h1>
+        <h1> 17기 박채영 게시판</h1>
         
         <?php if(isset($_SESSION['username'])): ?>
             <p>안녕하세요, <b><?= htmlspecialchars($_SESSION['username']) ?></b>님! 
