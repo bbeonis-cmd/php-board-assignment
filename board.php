@@ -105,7 +105,7 @@ $result = $conn->query($query);
 
         <!-- 글쓰기 기능 구역 -->
         <div class="form-box">
-            <h3>✍️ 새 게시글 작성</h3>
+            <h3> 새 게시글 작성</h3>
             <?php if(isset($_SESSION['user_id'])): ?>
                 <form action="board.php?type=<?= $board_type ?>" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="write" value="1">
