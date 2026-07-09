@@ -5,7 +5,7 @@ $file_id = (int)$_GET['id'];
 $res = $conn->query("SELECT * FROM files WHERE id = $file_id");
 if ($res && $res->num_rows > 0) {
     $file = $res->fetch_assoc();
-    $file_path = '/var/www/html/uploads/' . $file['save_name'];
+    $file_path = 'uploads/' . $file['save_name'];
 
     if (file_exists($file_path)) {
         header('Content-Description: File Transfer');
