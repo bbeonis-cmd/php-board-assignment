@@ -6,6 +6,7 @@ $res = $conn->query("SELECT * FROM files WHERE id = $file_id");
 if ($res && $res->num_rows > 0) {
     $file = $res->fetch_assoc();
     $file_path = 'uploads/' . $file['save_name'];
+    echo "컴퓨터가 찾고 있는 실제 경로: " . $file_path; exit;
 
     if (file_exists($file_path)) {
         header('Content-Description: File Transfer');
