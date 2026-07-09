@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['write'])) {
             $file_size = $_FILES['file']['size'];
             $ext = pathinfo($ori_name, PATHINFO_EXTENSION);
             $save_name = time() . '_' . uniqid() . '.' . $ext;
-            $upload_dir = '/var/www/html/uploads/';
+            $upload_dir = 'uploads/';
 
             if (move_uploaded_file($_FILES['file']['tmp_name'], $upload_dir . $save_name)) {
                 $conn->query("INSERT INTO files (post_id, ori_name, save_name, file_size) VALUES ($post_id, '$ori_name', '$save_name', $file_size)");
